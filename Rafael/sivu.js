@@ -1,33 +1,54 @@
 (function() {
 	const myQuestions = [
 	  {
-		question: "Who is the strongest?",
+		question: "what is 1 + 1?",
 		answers: {
-		  a: "Superman",
-		  b: "The Terminator",
-		  c: "Waluigi, obviously"
+		  a: "11",
+		  b: "3",
+		  c: "2"
 		},
 		correctAnswer: "c"
 	  },
 	  {
-		question: "What is the best site ever created?",
+		question: "What is 10/2?",
 		answers: {
-		  a: "SitePoint",
-		  b: "Simple Steps Code",
-		  c: "Trick question; they're both the best"
+		  a: "4",
+		  b: "10",
+		  c: "5"
 		},
 		correctAnswer: "c"
 	  },
 	  {
-		question: "Where is Waldo really?",
+		question: "How many sides does a triangle have?",
 		answers: {
-		  a: "Antarctica",
-		  b: "Exploring the Pacific Ocean",
-		  c: "Sitting in a tree",
-		  d: "Minding his own business, so stop asking"
+		  a: "Zero",
+		  b: "One",
+		  c: "Two",
+		  d: "Three"
 		},
 		correctAnswer: "d"
-	  }
+	  },
+      {
+		question: "If Joe has two apples and gets five more, how many apples does Joe have??",
+		answers: {
+		  a: "6",
+		  b: "3",
+		  c: "8",
+		  d: "7"
+		},
+		correctAnswer: "d"
+	  },
+      {
+		question: "It is what it is?",
+		answers: {
+		  a: "It is",
+		  b: "It is",
+		  c: "It is",
+		  d: "It is"
+		},
+		correctAnswer: "a"
+	  },
+      
 	];
   
 	function buildQuiz() {
