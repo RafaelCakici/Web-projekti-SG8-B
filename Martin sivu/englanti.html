@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="java.js"></script>
+    <script src="java.js" defer></script>
 </head>
 <body>
     <!--Navbar alkaa-->
@@ -31,8 +31,9 @@
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/Rafael/sivu.html">Matikkavisa</a></li>
                   <li><a class="dropdown-item" href="/Martin sivu/englanti.html">Englanninvisa</a></li>
-                  <li><a class="dropdown-item" href="/Aapon sivut/index.html">Historiavisa</a></li>
-                  <li><a class="dropdown-item" href="/">Biologiavisa</a></li>
+                  <li><a class="dropdown-item" href="/Maken sivu/index.html">Historiavisa</a></li>
+                  <li><a class="dropdown-item" href="/Väpän sivut/biologia.html">Biologiavisa</a></li>
+                  <li><a class="dropdown-item" href="/Aapon sivut/index.html">Luontovisa</a></li>
                 </ul>
               </li>
             </ul>
@@ -41,67 +42,10 @@
       </nav>
       <!--Navbar loppuu-->
       <h1>Englanninvisa</h1>
-
-<form action="/action_page.php">
-  <p>What is your response to: Nice to meet you!</p>
-  <input type="radio" id="okay" name="your response" value="okay">
-  <label for="okay">Okay.</label><br>
-
-  <input type="radio" id="bye" name="your response" value="bye">
-  <label for="bye">Bye!</label><br>
-
-  <input type="radio" id="you too" name="your response" value="you too">
-  <label for="you too">You too!</label>
-
-  <br>
-
-  <p>How do you say: Kello on vartin yli yhdeksän. </p>
-  <input type="radio" id="vastaus1" name="your response1" value="9">
-  <label for="kello1">It's nine o'clock.</label><br>
-
-  <input type="radio" id="vastaus2" name="your response1" value="10">
-  <label for="kello2">It's half past ten.</label><br>  
-
-  <input type="radio" id="vastaus3" name="your response1" value="vartin yli">
-  <label for="kello3">It's quarter past nine.</label><br>
-
-  <br>  
-
-  <p>What is the meaning of the word mommy </p>
-  <input type="radio" id="mummo" name="your response2" value="9">
-  <label for="perhe1">Iso-äiti</label><br>
-
-  <input type="radio" id="isi" name="your response2" value="10">
-  <label for="perhe2">Iskä</label><br>  
-
-  <input type="radio" id="äiti" name="your response2" value="vartin yli">
-  <label for="perhe3">Äiti</label><br>
-
-  <br>  
-
-  <p>How do you say: Minulla on kylmä</p>
-  <input type="radio" id="jano" name="your response3" value="jano">
-  <label for="tunne1">Im thirsty.</label><br>
-
-  <input type="radio" id="ikä" name="your response3" value="ikä">
-  <label for="tunne2">Im ten years old.</label><br>
-
-  <input type="radio" id="kylmä" name="your response3" value="kylmä">
-  <label for="tunne3">im freezing</label><br>
-
-  <br>  
-
-  <p>What you dont sit on?</p>
-  <input type="radio" id="pöytä" name="your response4" value="pöytä">
-  <label for="istua1">Table</label><br>
-
-  <input type="radio" id="sohva" name="your response4" value="sohva">
-  <label for="istua2">Sofa</label><br>  
-
-  <input type="radio" id="tuoli" name="your response4" value="tuoli">
-  <label for="istua3">Chair</label><br>
-  <br>
-  <button>Valmis</button>
-</form>
+      <div class="quiz-container">
+        <div id="quiz"></div>
+      </div>
+      <button id="submit">Valmis</button>
+      <div id="results"></div>   
 </body>
 </html>
