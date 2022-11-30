@@ -52,12 +52,11 @@
 	];
   
 	function buildQuiz() {
-	  // we'll need a place to store the HTML output
 	  const output = [];
   
-	  // for each question...
+	  // jokaiselle kysymykselle
 	  myQuestions.forEach((currentQuestion, questionNumber) => {
-		// we'll want to store the list of answer choices
+		// kysymys vaihdoehdot
 		const answers = [];
   
 		// and for each available answer...
@@ -72,7 +71,6 @@
 		  );
 		}
   
-		// add this question and its answers to the output
 		output.push(
 		  `<div class="slide">
 			 <div class="question"> ${currentQuestion.question} </div>
@@ -81,39 +79,34 @@
 		);
 	  });
   
-	  // finally combine our output list into one string of HTML and put it on the page
 	  quizContainer.innerHTML = output.join("");
 	}
   
 	function showResults() {
-	  // gather answer containers from our quiz
+	  // vastauksen koonti
 	  const answerContainers = quizContainer.querySelectorAll(".answers");
   
-	  // keep track of user's answers
+	  // vastaukset
 	  let numCorrect = 0;
-  
-	  // for each question...
 	  myQuestions.forEach((currentQuestion, questionNumber) => {
-		// find selected answer
 		const answerContainer = answerContainers[questionNumber];
 		const selector = `input[name=question${questionNumber}]:checked`;
 		const userAnswer = (answerContainer.querySelector(selector) || {}).value;
   
-		// if answer is correct
+		// jos oikein
 		if (userAnswer === currentQuestion.correctAnswer) {
 		  // add to the number of correct answers
 		  numCorrect++;
   
-		  // color the answers green
+		  // vastaukset vihreäks
 		  answerContainers[questionNumber].style.color = "lightgreen";
 		} else {
-		  // if answer is wrong or blank
-		  // color the answers red
+		  // jos väärin tai tyhjä, punainen
 		  answerContainers[questionNumber].style.color = "red";
 		}
 	  });
   
-	  // show number of correct answers out of total
+	  // oikeiden määrä kaikista
 	  resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
 	}
   
@@ -149,7 +142,7 @@
 	const resultsContainer = document.getElementById("results");
 	const submitButton = document.getElementById("submit");
   
-	// display quiz right away
+	// lataa kysymykset
 	buildQuiz();
   
 	const previousButton = document.getElementById("previous");
@@ -159,8 +152,9 @@
   
 	showSlide(0);
   
-	// on submit, show results
+	// submit lähettää vastaukset
 	submitButton.addEventListener("click", showResults);
 	previousButton.addEventListener("click", showPreviousSlide);
 	nextButton.addEventListener("click", showNextSlide);
   })();
+  
