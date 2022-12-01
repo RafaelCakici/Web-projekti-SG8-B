@@ -97,7 +97,7 @@
 		  numCorrect++;
   
 		  // vastaukset vihreäks
-		  answerContainers[questionNumber].style.color = "lightgreen";
+		  answerContainers[questionNumber].style.color = "blue";
 		} else {
 		  // jos väärin tai tyhjä, punainen
 		  answerContainers[questionNumber].style.color = "red";
