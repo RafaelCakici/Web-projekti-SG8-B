@@ -1,5 +1,5 @@
 (function() {
-	const myQuestions = [
+	const Questions = [
 	  {
 		question: "What is 1 + 1?",
 		answers: {
@@ -55,10 +55,10 @@
 	  const output = [];
   
 	  // jokaiselle kysymykselle
-	  myQuestions.forEach((currentQuestion, questionNumber) => {
-		// kysymys vaihdoehdot
+	  Questions.forEach((currentQuestion, questionNumber) => {
+		//
 		const answers = [];
-
+		// lataa vastaukset
 		for (letter in currentQuestion.answers) {
 		  answers.push(
 			`<label>
@@ -86,7 +86,7 @@
   
 	  // vastaukset
 	  let numCorrect = 0;
-	  myQuestions.forEach((currentQuestion, questionNumber) => {
+	  Questions.forEach((currentQuestion, questionNumber) => {
 		const answerContainer = answerContainers[questionNumber];
 		const selector = `input[name=question${questionNumber}]:checked`;
 		const userAnswer = (answerContainer.querySelector(selector) || {}).value;
@@ -105,7 +105,7 @@
 	  });
   
 	  // oikeiden määrä kaikista
-	  resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+	  resultsContainer.innerHTML = `${numCorrect} out of ${Questions.length}`;
 	}
   
 	const quizContainer = document.getElementById("quiz");

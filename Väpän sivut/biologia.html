@@ -40,6 +40,108 @@
           </div>
         </div>
       </nav>
+      <h1>Biologiavisa</h1>
+      <h2 class="quizHeader">Tee visa!</h2>
       
-</body>
-</html>
+        <table style="width: 800px; height: 400px;" >
+        <tr>
+          <td>
+              <div>
+                  <p class="question">1. Mikä seuraavista on suurin nisäkäs?</p>
+    
+                <ul>
+                <input class="answer" type="radio" name="q1" value="1">
+                <label id="correctString1">Sinivalas</label>
+                <br>
+                <input class="answer" type="radio" name="q1" value="0">
+                <label>Hevonen</label>
+                <br>
+                <input class="answer" type="radio" name="q1" value="0">
+                <label>Norsu</label>
+                <br>
+                <input class="answer" type="radio" name="q1" value="0">
+                <label>Koira</label>
+                </ul>
+              </div>
+          </td>
+          <td>
+              <div>
+                  <p class="question">2. Mikä näistä ei ole havupuu?</p>
+    
+                <ul>
+                <input class="answer" type="radio" name="q2" value="0">
+                <label>Kuusi</label>
+                <br>
+                <input class="answer" type="radio" name="q2" value="1">
+                <label id="correctString2">Koivu</label>
+                <br>
+                <input class="answer" type="radio" name="q2" value="0">
+                <label>Mänty</label>
+                <br>
+                <input class="answer" type="radio" name="q2" value="0">
+                <label>Marjakuusi</label>
+                </ul>
+              </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <div>
+                  <p class="question">3. Mikä linnuista on Suomen kansallislintu?</p>
+    
+                <ul>
+                <input class="answer" type="radio" name="q3" value="0">
+                <label>Varis</label>
+                <br>
+                <input class="answer" type="radio" name="q3" value="1">
+                <label id="correctString3">Laulujoutsen</label>
+                <br>
+                <input class="answer" type="radio" name="q3" value="0">
+                <label>Punatulkku</label>
+                <br>
+                <input class="answer" type="radio" name="q3" value="0">
+                <label>Talitintti</label>
+                </ul>
+            </div>
+          </td>
+          <td>
+              <div>
+                  <p class="question">4. Mikä näistä on Suomen suurin eläin?</p>
+    
+                <ul>
+                <input class="answer" type="radio" name="q4" value="0">
+                <label>Karhu</label>
+                <br>
+                <input class="answer" type="radio" name="q4" value="1">
+                <label id="correctString4">Hirvi</label>
+                <br>
+                <input class="answer" type="radio" name="q4" value="0">
+                <label>Orava</label>
+                <br>
+                <input class="answer" type="radio" name="q4" value="0">
+                <label>Poro</label>
+                </ul>
+              </div>
+          </td>
+        </tr>
+        </table>
+    <br/>
+      <div class="submitter">
+              <input class="quizSubmit" id="submitButton" onClick="submitQuiz()"
+              type="submit" value="Submit" />
+        </div>
+      
+    <!--show only wrong answers on submit-->
+        <div class="quizAnswers" id="correctAnswer1"></div>
+            <div class="quizAnswers" id="correctAnswer2"></div>
+        <div class="quizAnswers" id="correctAnswer3"></div>
+        <div class="quizAnswers" id="correctAnswer4"></div>
+    
+    <!--show score upon submit-->
+        <div>
+            <h2 class="quizScore" id="userScore"></h2>
+        </div>
+        </div>
+    
+    </body>
+</html>     
