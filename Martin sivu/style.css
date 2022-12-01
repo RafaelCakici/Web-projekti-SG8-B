@@ -1,11 +1,14 @@
 body{
     background-color: #ffbf00;
-    text-align: center;
+    text-align: center; 
+    font-family: "Work Sans", "Sans-serif";
     
 }
 button{
     background-color: green;
     border-radius: 10px;
+    font-family: "Work Sans", "Sans-serif";
+    margin: 1%;
 
 }
 h1{
@@ -20,4 +23,14 @@ h1{
 .question{
     font-size: large;
     padding: 1%;
+}
+.fa-bars{
+    color: black;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+.answers{
+   font-weight: 200;
+   font-size: medium;
+   padding: 0;
 }
