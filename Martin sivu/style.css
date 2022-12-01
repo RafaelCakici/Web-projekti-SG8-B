@@ -6,14 +6,18 @@ body{
 button{
     background-color: green;
     border-radius: 10px;
-    border-style: ;
 
 }
 h1{
-    font-weight: 300;
+    font-size: large;
+    font-weight: 700;
     margin: 0px;
     padding: 10px;
     font-size: 20px;
     background-color: red;
     color: black;
+}
+.question{
+    font-size: large;
+    padding: 1%;
 }

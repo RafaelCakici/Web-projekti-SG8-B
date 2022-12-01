@@ -103,9 +103,8 @@
 	  });
   
 	  // lasketaan oikeiden määrä
-	  resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+	  resultsContainer.innerHTML = `${numCorrect} kautta ${myQuestions.length}`;
 	}
-  
 	const quizContainer = document.getElementById("quiz");
 	const resultsContainer = document.getElementById("results");
 	const submitButton = document.getElementById("submit");
