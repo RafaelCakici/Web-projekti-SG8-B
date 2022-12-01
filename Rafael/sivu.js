@@ -93,7 +93,7 @@
   
 		// jos oikein
 		if (userAnswer === currentQuestion.correctAnswer) {
-		  // add to the number of correct answers
+		  // lisää oikeiden määrää
 		  numCorrect++;
   
 		  // vastaukset vihreäks
