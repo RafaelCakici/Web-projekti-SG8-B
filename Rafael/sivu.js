@@ -116,6 +116,8 @@
 	buildQuiz();
   
 	// submit lähettää vastaukset
-	submitButton.addEventListener("click", showResults);
+	submitButton.onclick = function(){
+        showResults(Questions, quizContainer, resultsContainer);
+    }
   })();
   
