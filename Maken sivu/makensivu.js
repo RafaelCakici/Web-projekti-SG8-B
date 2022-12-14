@@ -1,52 +1,52 @@
 (function() {
 	const myQuestions = [
 	  {
-		question: "Mikä on Suomen kansalliseläin",
+		question: "Kuka oli Urho Kaleva Kekkonen?",
 		answers: {
-		  a: "Karhu",
-		  b: "Poro",
-		  c: "Kameli"
+		  a: "Lääkäri",
+		  b: "Presidentti",
+		  c: "Astronautti"
+		},
+		correctAnswer: "b"
+	  },
+	  {
+		question: "Mihin Egyptiläisiä pyramideja käytettiin?",
+		answers: {
+		  a: "Faaraoiden hautoina",
+		  b: "Museoina",
+		  c: "Koteina"
 		},
 		correctAnswer: "a"
 	  },
 	  {
-		question: "Mikä on isoin näistä eläimistä",
+		question: "Minä vuonna Suomessa käytiin talvisota?",
 		answers: {
-		  a: "Siili",
-		  b: "Piisami",
-		  c: "Susi"
+		  a: "1925-1930",
+		  b: "1935-1938",
+		  c: "1939-1940",
+		  d: "1943-1945"
 		},
 		correctAnswer: "c"
 	  },
-	  {
-		question: "Mikä on Suomen kansalliskukka",
+      {
+		question: "Minä vuonna Suomi voitti Euroviisut?",
 		answers: {
-		  a: "Ruusu",
-		  b: "Nokkonen",
-		  c: "Auringonkukka",
-		  d: "Kielo"
+		  a: "2006",
+		  b: "2003",
+		  c: "2008",
+		  d: "2007"
 		},
-		correctAnswer: "d"
+		correctAnswer: "a"
 	  },
       {
-		question: "Minkä värinen on kirahvin kieli",
+		question: "It is what it is?",
 		answers: {
-		  a: "Valkoinen",
-		  b: "Keltainen",
-		  c: "Neonvihreä",
-		  d: "Punasininen"
+		  a: "It is",
+		  b: "It is",
+		  c: "It is",
+		  d: "It is"
 		},
-		correctAnswer: "d"
-	  },
-      {
-		question: "Milloin Kvagga kuoli sukupuuttoon",
-		answers: {
-		  a: "2002",
-		  b: "1883",
-		  c: "2022",
-		  d: "1917"
-		},
-		correctAnswer: "b"
+		correctAnswer: "a"
 	  },
       
 	];
@@ -81,7 +81,7 @@
 	}
   
 	function showResults() {
-	  // vastaukset
+	  // vastauksen koonti
 	  const answerContainers = quizContainer.querySelectorAll(".answers");
   
 	  // vastaukset
@@ -96,10 +96,10 @@
 		  // add to the number of correct answers
 		  numCorrect++;
   
-		  // vastaukset muuttaa väriä
+		  // vastaukset vihreäks
 		  answerContainers[questionNumber].style.color = "lightgreen";
 		} else {
-		  // jos väärin tai tyhjä muuttaa väriä kans
+		  // jos väärin tai tyhjä, punainen
 		  answerContainers[questionNumber].style.color = "red";
 		}
 	  });
@@ -115,7 +115,6 @@
 	// lataa kysymykset
 	buildQuiz();
   
-	// submit submittaa vastausket
+	// submit lähettää vastaukset
 	submitButton.addEventListener("click", showResults);
   })();
-  
