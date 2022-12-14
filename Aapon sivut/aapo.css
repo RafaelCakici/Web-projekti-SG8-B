@@ -1,0 +1,18 @@
+body{
+    background-color: #fcfc00;
+    text-align: center;
+    
+}
+button{
+    background-color: green;
+    border-radius: 5px;
+
+}
+h1{
+    font-weight: 300;
+    margin: 0px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: red;
+    color: black;
+}
