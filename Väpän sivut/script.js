@@ -1,71 +1,105 @@
-// js here
-
-function submitQuiz() {
-    console.log('submitted');
-
-// get each answer score
-    function answerScore (qName) {
-        var radiosNo = document.getElementsByName(qName);
-
-        for (var i = 0, length = radiosNo.length; i < length; i++) {
-               if (radiosNo[i].checked) {
-        // do something with radiosNo
-                var answerValue = Number(radiosNo[i].value);
+const quizData = [
+    {
+      question: "Mikä seuraavista on suurin nisäkäs?",
+      a: "Norsu",
+      b: "Koira",
+      c: "Hevonen",
+      d: "Sinivalas",
+      correct: "d"
+    },
+    {
+      question: "Mikä näistä EI ole havupuu?",
+      a: "Kuusi",
+      b: "Koivu",
+      c: "Marjakuusi",
+      d: "Mänty",
+      correct: "b"
+    },
+    {
+      question: "Mikä linnuista on suomen kansallislintu?",
+      a: "Laulujoutsen",
+      b: "Varis",
+      c: "Punatulkku",
+      d: "Talitintti",
+      correct: "a"
+    },
+    {
+      question: "Mikä näistä on Suomen suurin eläin?",
+      a: "Karhu",
+      b: "Hirvi",
+      c: "Orava",
+      d: "Ei mikään näistä",
+      correct: "b"
+    }
+  ];
+  
+  let currentQuestion = 0;
+  let answers = [];
+  
+  function loadQuestion() {
+    const title = document.querySelector("#question");
+    const optionContainer = document.querySelector("#options");
+    const options = [];
+    title.textContent = quizData[currentQuestion].question;
+    for (const option of Object.keys(quizData[currentQuestion])) {
+      if (option === "question" || option === "correct") {
+        continue;
+      } else {
+        const optionElement = document.createElement("li");
+        const radio = document.createElement("input");
+        radio.setAttribute("id", option);
+        radio.setAttribute("type", "radio");
+        radio.setAttribute("name", "answer");
+  
+        const label = document.createElement("label");
+        label.setAttribute("for", option);
+        label.textContent = quizData[currentQuestion][option];
+        optionElement.append(radio, label);
+        options.push(optionElement);
+      }
+    }
+    optionContainer.append(...options);
+  }
+  
+  loadQuestion();
+  
+  document.querySelector(".submit").addEventListener("click", (e) => {
+    if (currentQuestion === -1) {
+      document.querySelector(".submit").textContent = "Seuraava";
+      currentQuestion++;
+      loadQuestion();
+    } else {
+      let selected = false;
+      const radios = document.getElementsByName("answer");
+      for (const radio of radios) {
+        if (radio.checked) {
+          answers.push(radio.id);
+          selected = true;
+        }
+      }
+      if (selected) {
+        currentQuestion++;
+        const optionContainer = document.querySelector("#options");
+        while (optionContainer.firstChild) {
+          optionContainer.firstChild.remove();
+        }
+        if (currentQuestion === quizData.length) {
+          let points = 0;
+          answers.forEach((answer, index) => {
+            if (answer === quizData[index].correct) {
+              points = points + 1;
             }
+          });
+          const title = document.querySelector("#question");
+          title.textContent = `Sinä arvasit ${points} kysymykseen oikein ${quizData.length} kysymyksestä!`;
+          currentQuestion = -1;
+          answers = [];
+          document.querySelector(".submit").textContent = "Aloita alusta";
+        } else {
+          loadQuestion();
         }
-        // change NaNs to zero
-        if (isNaN(answerValue)) {
-            answerValue = 0;
-        }
-        return answerValue;
+        selected = false;
+      }
     }
-
-// calc score with answerScore function
-    var calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4'));
-    console.log("CalcScore: " + calcScore); // it works!
-
-// function to return correct answer string
-    function correctAnswer (correctStringNo, qNumber) {
-        console.log("qNumber: " + qNumber);  // logs 1,2,3,4 after called below
-        return ("Oikea vastaus kysymykseen on #" + qNumber + ": &nbsp;<strong>" +
-            (document.getElementById(correctStringNo).innerHTML) + "</strong>");
-        }
-
-// print correct answers only if wrong (calls correctAnswer function)
-    if (answerScore('q1') === 0) {
-        document.getElementById('correctAnswer1').innerHTML = correctAnswer('correctString1', 1);
-    }
-    if (answerScore('q2') === 0) {
-        document.getElementById('correctAnswer2').innerHTML = correctAnswer('correctString2', 2);
-    }
-    if (answerScore('q3') === 0) {
-        document.getElementById('correctAnswer3').innerHTML = correctAnswer('correctString3', 3);
-    }
-    if (answerScore('q4') === 0) {
-        document.getElementById('correctAnswer4').innerHTML = correctAnswer('correctString4', 4);
-    }
-
-// calculate "possible score" integer
-    var questionCountArray = document.getElementsByClassName('question');
-
-    var questionCounter = 0;
-    for (var i = 0, length = questionCountArray.length; i < length; i++) {
-        questionCounter++;
-    }
-
-// show score as "score/possible score"
-    var showScore = "Pisteesi: " + calcScore +"/" + questionCounter;
-// if 4/4, "Perfect score!"
-    if (calcScore === questionCounter) {
-        showScore = showScore + "&nbsp; <strong>Erinomaista!</strong>"
-    };
-    document.getElementById('userScore').innerHTML = showScore;
-}
-
-$(document).ready(function() {
-
-$('#submitButton').click(function() {
-    $(this).addClass('hide');
-});
-
-});
+  });
+  
