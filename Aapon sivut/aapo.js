@@ -16,7 +16,7 @@
 		  b: "Piisami",
 		  c: "Susi"
 		},
-		correctAnswer: "a"
+		correctAnswer: "c"
 	  },
 	  {
 		question: "Mikä on Suomen kansalliskukka",
@@ -31,10 +31,10 @@
       {
 		question: "Minkä värinen on kirahvin kieli",
 		answers: {
-		  a: "valkoinen",
-		  b: "keltainen",
-		  c: "neonvihreä",
-		  d: "punasininen"
+		  a: "Valkoinen",
+		  b: "Keltainen",
+		  c: "Neonvihreä",
+		  d: "Punasininen"
 		},
 		correctAnswer: "d"
 	  },
@@ -81,7 +81,7 @@
 	}
   
 	function showResults() {
-	  // vastauksen koonti
+	  // vastaukset
 	  const answerContainers = quizContainer.querySelectorAll(".answers");
   
 	  // vastaukset
@@ -96,10 +96,10 @@
 		  // add to the number of correct answers
 		  numCorrect++;
   
-		  // vastaukset vihreäks
+		  // vastaukset muuttaa väriä
 		  answerContainers[questionNumber].style.color = "lightgreen";
 		} else {
-		  // jos väärin tai tyhjä, punainen
+		  // jos väärin tai tyhjä muuttaa väriä kans
 		  answerContainers[questionNumber].style.color = "red";
 		}
 	  });
@@ -115,7 +115,7 @@
 	// lataa kysymykset
 	buildQuiz();
   
-	// submit lähettää vastaukset
+	// submit submittaa vastausket
 	submitButton.addEventListener("click", showResults);
   })();
   
