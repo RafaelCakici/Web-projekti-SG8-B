@@ -8,6 +8,10 @@ body{
   text-align: center;
   background-color: #ffbf00;
 }
+.navbar-inner{
+  background-image: url("/Rafael/images.jpg");
+  background-repeat: no-repeat;
+}
 h1{
   font-weight: 300;
   margin: 0px;

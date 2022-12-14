@@ -55,23 +55,23 @@
 	  const output = [];
   
 	  // jokaiselle kysymykselle
-	  Questions.forEach((currentQuestion, questionNumber) => {
+	  Questions.forEach((Question, questionNumber) => {
 		//
 		const answers = [];
 		// lataa vastaukset
-		for (letter in currentQuestion.answers) {
+		for (letter in Question.answers) {
 		  answers.push(
 			`<label>
 			   <input type="radio" name="question${questionNumber}" value="${letter}">
 				${letter} :
-				${currentQuestion.answers[letter]}
+				${Question.answers[letter]}
 			 </label>`
 		  );
 		}
   
 		output.push(
-		  `<div class="slide">
-			 <div class="question"> ${currentQuestion.question} </div>
+		  `<div class="">
+			 <div class="question"> ${Question.question} </div>
 			 <div class="answers"> ${answers.join("")} </div>
 		   </div>`
 		);
@@ -86,24 +86,24 @@
   
 	  // vastaukset
 	  let numCorrect = 0;
-	  Questions.forEach((currentQuestion, questionNumber) => {
+	  Questions.forEach((Question, questionNumber) => {
+		//valittu vastaus
 		const answerContainer = answerContainers[questionNumber];
 		const selector = `input[name=question${questionNumber}]:checked`;
 		const userAnswer = (answerContainer.querySelector(selector) || {}).value;
   
 		// jos oikein
-		if (userAnswer === currentQuestion.correctAnswer) {
+		if (userAnswer === Question.correctAnswer) {
 		  // lisää oikeiden määrää
 		  numCorrect++;
-  
 		  // vastaukset vihreäks
 		  answerContainers[questionNumber].style.color = "blue";
+		  // vastaukset vihreäks
 		} else {
 		  // jos väärin tai tyhjä, punainen
 		  answerContainers[questionNumber].style.color = "red";
 		}
 	  });
-  
 	  // oikeiden määrä kaikista
 	  resultsContainer.innerHTML = `${numCorrect} out of ${Questions.length}`;
 	}
