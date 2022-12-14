@@ -9,7 +9,7 @@ button{
     border-radius: 10px;
     font-family: "Work Sans", "Sans-serif";
     margin: 1%;
-
+    padding: 1px 20px;
 }
 h1{
     font-size: large;
@@ -29,6 +29,9 @@ h1{
     margin-left: 1em;
     margin-top: 1em;
     
+}
+.fa-house-user{
+    color: black;
 }
 .answers{
    font-weight: 200;
