@@ -5,7 +5,10 @@ body{
 }
 button{
     background-color: green;
-    border-radius: 5px;
+    border-radius: 50px;
+    border-width: 2px;
+    padding: 20px;
+
 
 }
 h1{
