@@ -9,10 +9,21 @@ button{
 
 }
 h1{
-    font-weight: 300;
+    font-weight: 700;
     margin: 0px;
     padding: 10px;
     font-size: 20px;
     background-color: red;
     color: black;
 }
+.question{
+    margin-top: 20px;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .answers {
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    display: inline-block;
+  }
