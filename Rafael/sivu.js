@@ -1,7 +1,7 @@
 (function() {
 	const Questions = [
 	  {
-		question: "What is 1 + 1?",
+		question: "How much is 1 + 1?",
 		answers: {
 		  a: "11",
 		  b: "3",
@@ -10,13 +10,13 @@
 		correctAnswer: "c"
 	  },
 	  {
-		question: "What is 10/2?",
+		question: "How much is 4 + 4?",
 		answers: {
-		  a: "4",
+		  a: "8",
 		  b: "10",
-		  c: "5"
+		  c: "7"
 		},
-		correctAnswer: "c"
+		correctAnswer: "a"
 	  },
 	  {
 		question: "How many sides does a triangle have?",
