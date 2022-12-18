@@ -6,15 +6,19 @@ body{
 	color: #333;
   font-weight: 300;
   text-align: center;
-  background-color: #ffbf00;
+  background: url(/Rafael/img/counting-g3005392ae_640.png)left,url(/Rafael/img/counting-gedd7aa5d4_640.png) right;
+  background-repeat: no-repeat;
+  background-color: #FFAB00;
+
 }
 h1{
   font-weight: 300;
   margin: 0px;
   padding: 10px;
-  font-size: 20px;
-  background-color: red;
+  font-size: 30px;
+  background-color: #DD2E18;
   color: black;
+  border: 2px solid black;
 }
 .question{
   margin-top: 20px;
@@ -25,10 +29,12 @@ h1{
   border-style: outset;
   border-width: 2px;
   border-radius: 10px;
+  border-color: #333;
   padding: 20px;
   margin-bottom: 20px;
   text-align: left;
   display: inline-block;
+  background-color:#d6b348;
 }
 .answers label{
   display: block;
@@ -37,13 +43,14 @@ h1{
 button{
   font-family: 'Work Sans', sans-serif;
 	font-size: 22px;
-	background-color: #279;
-	color: #fff;
+	background-color: #d66920;
+	color: black;
 	border: 0px;
 	border-radius: 3px;
 	padding: 20px;
 	cursor: pointer;
 	margin-bottom: 20px;
+  border: 2px solid black;
 }
 button:hover{
 	background-color: #38a;
