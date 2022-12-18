@@ -39,14 +39,14 @@
 		correctAnswer: "a"
 	  },
       {
-		question: "It is what it is?",
+		question: "Minä vuonna Suomi itsenäistyi?",
 		answers: {
-		  a: "It is",
-		  b: "It is",
-		  c: "It is",
-		  d: "It is"
+		  a: "1912",
+		  b: "1930",
+		  c: "1917",
+		  d: "1920"
 		},
-		correctAnswer: "a"
+		correctAnswer: "c"
 	  },
       
 	];
@@ -93,7 +93,7 @@
   
 		// jos oikein
 		if (userAnswer === currentQuestion.correctAnswer) {
-		  // add to the number of correct answers
+		  // Lisää oikein vastaukset yhteen
 		  numCorrect++;
   
 		  // vastaukset vihreäks

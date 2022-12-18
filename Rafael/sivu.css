@@ -8,10 +8,6 @@ body{
   text-align: center;
   background-color: #ffbf00;
 }
-.navbar-inner{
-  background-image: url("/Rafael/images.jpg");
-  background-repeat: no-repeat;
-}
 h1{
   font-weight: 300;
   margin: 0px;
@@ -21,10 +17,15 @@ h1{
   color: black;
 }
 .question{
-  font-size: 30px;
+  margin-top: 20px;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 .answers {
+  border-style: outset;
+  border-width: 2px;
+  border-radius: 10px;
+  padding: 20px;
   margin-bottom: 20px;
   text-align: left;
   display: inline-block;
@@ -46,11 +47,4 @@ button{
 }
 button:hover{
 	background-color: #38a;
-}
-.fa-house-user{
-  color: black;
-}
-.fa-bars{
-  color: black;
-  margin-left: 1em;
 }

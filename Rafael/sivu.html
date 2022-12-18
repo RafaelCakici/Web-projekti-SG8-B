@@ -10,31 +10,36 @@
     <link rel="stylesheet" href="sivu.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a href="/etusivu/Etusivu.html"><i class="fa-solid fa-house-user fa-2x fa-bounce"></i></a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fa-solid fa-bars fa-1x"></i></a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="sivu.html">Matikkavisa</a></li>
-                  <li><a class="dropdown-item" href="/Martin sivu/englanti.html">Englanninvisa</a></li>
-                  <li><a class="dropdown-item" href="/Maken sivu/index.html">Historiavisa</a></li>
-                  <li><a class="dropdown-item" href="/Väpän sivut/biologia.html">Biologiavisa</a></li>
-                  <li><a class="dropdown-item" href="/Aapon sivut/index.html">Luontovisa</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg bg-light navbar-light">
+    <div class="container-fluid">
+    <a href="/etusivu/Etusivu.html" class="navbar-brand fa-solid fa-house-user fa-xl fa-beat"></a>
+    <button class="navbar-toggler" type="button"
+    data-bs-toggle="collapse" data-bs-target="#navmenu">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a href="/Väpän sivut/biologia.html" class="nav-link active">Biologiavisa</a>
+        </li>
+        <li class="nav-item">
+          <a href="/Martin sivu/englanti.html" class="nav-link">Englanninvisa</a>
+        </li>
+        <li class="nav-item">
+          <a href="/Rafael/sivu.html" class="nav-link">Matikkavisa</a>
+        </li>
+        <li class="nav-item">
+          <a href="/Maken sivu/index.html" class="nav-link">Historiavisa</a>
+        </li>
+        <li class="nav-item">
+          <a href="/Aapon sivut/index.html" class="nav-link">Luontovisa</a>
+        </li>
+      </ul>
+      </div>
+      </div>
+    </nav>
+      <!--Quiz-->
       <h1>Matikkavisa</h1>
     <div class="quiz-container">
       <div id="quiz"></div>
