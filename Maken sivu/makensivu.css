@@ -39,7 +39,10 @@ button{
     background-color:gainsboro;
   }
 
-  .results {
-    background-color: aqua;
-    color: aqua;
-  }
+  #results{
+    background-color: antiquewhite;
+    display: inline-block;
+    padding: 5px;
+    border: solid black;
+    border-radius: 10px;
+}
