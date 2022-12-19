@@ -1,16 +1,16 @@
 (function() {
 	const Questions = [
 	  {
-		question: "How much is 1 + 1?",
+		question: "Paljon on 3 + 3?",
 		answers: {
-		  a: "11",
-		  b: "3",
-		  c: "2"
+		  a: "33",
+		  b: "9",
+		  c: "6"
 		},
 		correctAnswer: "c"
 	  },
 	  {
-		question: "How much is 4 + 4?",
+		question: "Paljon on 12 - 4?",
 		answers: {
 		  a: "8",
 		  b: "10",
@@ -19,32 +19,32 @@
 		correctAnswer: "a"
 	  },
 	  {
-		question: "How many sides does a triangle have?",
+		question: "Monta kulmaa on kolmiolla?",
 		answers: {
-		  a: "Zero",
-		  b: "One",
-		  c: "Two",
-		  d: "Three"
+		  a: "Yksi",
+		  b: "Viisi",
+		  c: "Kolme",
+		  d: "Neljä"
 		},
-		correctAnswer: "d"
+		correctAnswer: "c"
 	  },
       {
-		question: "If Joe has two apples and gets five more, how many apples does Joe have??",
+		question: "Matilla on kaksi omenaa ja saa vielä kuusi lisää. Kuinka monta omenaa Matilla on?",
 		answers: {
 		  a: "6",
 		  b: "3",
 		  c: "8",
 		  d: "7"
 		},
-		correctAnswer: "d"
+		correctAnswer: "c"
 	  },
       {
-		question: "It is what it is?",
+		question: "Paljon on 24 ÷ 6? ",
 		answers: {
-		  a: "It is",
-		  b: "It is",
-		  c: "It is",
-		  d: "It is"
+		  a: "4",
+		  b: "6",
+		  c: "210",
+		  d: "18"
 		},
 		correctAnswer: "a"
 	  },
