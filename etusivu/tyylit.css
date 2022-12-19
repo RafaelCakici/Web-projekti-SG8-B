@@ -37,7 +37,7 @@ h1{
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   width: 100%;
-  height: auto;
+  height: cover;
     float: left;
 }
 .overlay1, .overlay2,.overlay3,.overlay4,.overlay5{
