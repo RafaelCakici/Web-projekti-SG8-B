@@ -1,6 +1,7 @@
 
-
 body{
+  width: 100%;
+  min-height: 100%;
 	font-size: 20px;
 	font-family: 'Work Sans', sans-serif;
 	color: #333;
@@ -24,6 +25,7 @@ h1{
   margin-top: 20px;
   font-size: 22px;
   margin-bottom: 10px;
+  font-weight: bold
 }
 .answers {
   border-style: outset;
@@ -35,6 +37,7 @@ h1{
   text-align: left;
   display: inline-block;
   background-color:#d6b348;
+  font-weight: bold
 }
 .answers label{
   display: block;
