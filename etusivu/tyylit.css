@@ -1,9 +1,10 @@
 .grass{
   position:absolute;
   width: 101%;
-  margin-left: -150px; /* very important for the image to be centered */
+  margin-left: -150px;
   left:9%;
   bottom:-250px;
+  /* En osaa venyttää kuvaa sopivaksi kaikille näytöille */
 }
 body{
   overflow: hidden;
@@ -47,7 +48,7 @@ h1{
   height: cover;
     float: left;
 }
-a:link{
+a:hover{
   text-decoration: none;
 }
 .overlay1, .overlay2,.overlay3,.overlay4,.overlay5{
