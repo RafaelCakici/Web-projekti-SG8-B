@@ -1,9 +1,9 @@
 .grass{
   position:absolute;
   width: 101%;
-  margin-left: -250px; /* very important for the image to be centered */
+  margin-left: -150px; /* very important for the image to be centered */
   left:9%;
-  bottom:-500px;
+  bottom:-250px;
 }
 body{
   overflow: hidden;
