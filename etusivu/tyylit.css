@@ -47,6 +47,9 @@ h1{
   height: cover;
     float: left;
 }
+a:link{
+  text-decoration: none;
+}
 .overlay1, .overlay2,.overlay3,.overlay4,.overlay5{
   position:auto;
   bottom: 0;
